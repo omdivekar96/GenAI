@@ -1,0 +1,11 @@
+#pip install -r requirements.txt
+langchain
+langchain-openai
+dotenv
+langchain-google-genai
+langchain-anthropic
+langchain-ChatNVIDIA
+streamlit
+langchain-ollama
+langchain-groq
+langchain-community

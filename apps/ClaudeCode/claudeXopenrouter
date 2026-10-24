@@ -1,0 +1,22 @@
+import os
+from dotenv import load_dotenv
+import requests
+
+load_dotenv()
+
+api_key = os.getenv("OPENROUTER_API_KEY", "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")
+headers = {
+    "Authorization": f"Bearer {api_key}",
+    "Content-Type": "application/json"
+}
+
+resp = requests.post(
+    "https://openrouter.ai/api/v1/chat/completions",
+    headers=headers,
+    json={
+        "model": "openrouter/free",
+        "messages": [{"role": "user", "content": "Hello!"}]
+    }
+)
+
+print(resp.json())
